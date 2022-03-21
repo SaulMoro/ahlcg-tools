@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "ahlcg-tools": "apps/ahlcg-tools",
+    "ahlcg-tools-e2e": "apps/ahlcg-tools-e2e"
+  }
+}

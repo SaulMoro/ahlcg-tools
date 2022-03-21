@@ -1,0 +1,94 @@
+{
+  "projectType": "application",
+  "root": "apps/ahlcg-tools",
+  "sourceRoot": "apps/ahlcg-tools/src",
+  "prefix": "ahlcg-tools",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/ahlcg-tools",
+        "index": "apps/ahlcg-tools/src/index.html",
+        "main": "apps/ahlcg-tools/src/main.ts",
+        "polyfills": "apps/ahlcg-tools/src/polyfills.ts",
+        "tsConfig": "apps/ahlcg-tools/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/ahlcg-tools/src/favicon.ico",
+          "apps/ahlcg-tools/src/assets"
+        ],
+        "styles": ["apps/ahlcg-tools/src/styles.scss"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/ahlcg-tools/src/environments/environment.ts",
+              "with": "apps/ahlcg-tools/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "ahlcg-tools:build:production"
+        },
+        "development": {
+          "browserTarget": "ahlcg-tools:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "ahlcg-tools:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "apps/ahlcg-tools/src/**/*.ts",
+          "apps/ahlcg-tools/src/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/ahlcg-tools"],
+      "options": {
+        "jestConfig": "apps/ahlcg-tools/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
