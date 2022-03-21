@@ -14,7 +14,26 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@ahlcg-tools/narration/data-access": [
+        "libs/narration/data-access/src/index.ts"
+      ],
+      "@ahlcg-tools/narration/feature-narration-main": [
+        "libs/narration/feature-narration-main/src/index.ts"
+      ],
+      "@ahlcg-tools/narration/util-models": [
+        "libs/narration/util-models/src/index.ts"
+      ],
+      "@ahlcg-tools/shared/util/app-config": [
+        "libs/shared/util/app-config/src/index.ts"
+      ],
+      "@ahlcg-tools/shared/util/data-state": [
+        "libs/shared/util/data-state/src/index.ts"
+      ],
+      "@ahlcg-tools/shared/util/models": [
+        "libs/shared/util/models/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

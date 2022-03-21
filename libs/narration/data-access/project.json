@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/narration/data-access",
+  "sourceRoot": "libs/narration/data-access/src",
+  "prefix": "ahlcg-tools",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/narration/data-access"],
+      "options": {
+        "jestConfig": "libs/narration/data-access/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/narration/data-access/src/**/*.ts",
+          "libs/narration/data-access/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:narration", "type:data-access"]
+}

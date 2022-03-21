@@ -1,9 +1,8 @@
-// This file can be replaced during build by using the `fileReplacements` array.
-// `ng build` replaces `environment.ts` with `environment.prod.ts`.
-// The list of file replacements can be found in `angular.json`.
+import { AppConfig } from '@ahlcg-tools/shared/util/app-config';
 
-export const environment = {
+export const environment: AppConfig = {
   production: false,
+  baseNarration: 'https://www.ahlcg.com/api/v1/narrations/',
 };
 
 /*

@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/narration/feature-narration-main",
+  "sourceRoot": "libs/narration/feature-narration-main/src",
+  "prefix": "ahlcg-tools",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/narration/feature-narration-main"],
+      "options": {
+        "jestConfig": "libs/narration/feature-narration-main/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/narration/feature-narration-main/src/**/*.ts",
+          "libs/narration/feature-narration-main/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:narration", "type:feature"]
+}

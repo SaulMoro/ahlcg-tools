@@ -16,9 +16,10 @@
   },
   "tasksRunnerOptions": {
     "default": {
-      "runner": "@nrwl/workspace/tasks-runners/default",
+      "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
+        "cacheableOperations": ["build", "lint", "test", "e2e"],
+        "accessToken": "OWM2OWZjMTUtNDgyYS00ZDZmLWI1NTktMjNhZmZjNDI5NmU0fHJlYWQtd3JpdGU="
       }
     }
   },
@@ -35,14 +36,34 @@
       "style": "scss",
       "linter": "eslint",
       "unitTestRunner": "jest",
-      "e2eTestRunner": "cypress"
+      "e2eTestRunner": "cypress",
+      "standaloneConfig": true,
+      "inlineTemplate": true,
+      "inlineStyle": true
     },
     "@nrwl/angular:library": {
       "linter": "eslint",
-      "unitTestRunner": "jest"
+      "unitTestRunner": "jest",
+      "tags": "scope:(narration|shared),type:(feature|data-access|ui|util)",
+      "standaloneConfig": true
     },
     "@nrwl/angular:component": {
-      "style": "scss"
+      "style": "scss",
+      "changeDetection": "OnPush",
+      "inlineTemplate": true,
+      "inlineStyle": true
+    },
+    "@nrwl/angular:scam": {
+      "style": "scss",
+      "changeDetection": "OnPush",
+      "inlineTemplate": true,
+      "inlineStyle": true
+    },
+    "@schematics/angular:component": {
+      "style": "scss",
+      "changeDetection": "OnPush",
+      "inlineTemplate": true,
+      "inlineStyle": true
     }
   },
   "defaultProject": "ahlcg-tools"
