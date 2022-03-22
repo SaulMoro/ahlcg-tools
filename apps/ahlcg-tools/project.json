@@ -88,6 +88,9 @@
         "jestConfig": "apps/ahlcg-tools/jest.config.js",
         "passWithNoTests": true
       }
+    },
+    "deploy": {
+      "executor": "angular-cli-ghpages:deploy"
     }
   },
   "tags": ["scope:ahlcg-tools", "type:app"]

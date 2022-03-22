@@ -5,6 +5,7 @@
     "ahlcg-tools-e2e": "apps/ahlcg-tools-e2e",
     "narration-data-access": "libs/narration/data-access",
     "narration-feature-narration-main": "libs/narration/feature-narration-main",
+    "narration-ui": "libs/narration/ui",
     "narration-util-models": "libs/narration/util-models",
     "shared-util-app-config": "libs/shared/util/app-config",
     "shared-util-data-state": "libs/shared/util/data-state",

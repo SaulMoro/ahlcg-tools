@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/narration/ui",
+  "sourceRoot": "libs/narration/ui/src",
+  "prefix": "ahlcg-tools",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/narration/ui"],
+      "options": {
+        "jestConfig": "libs/narration/ui/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/narration/ui/src/**/*.ts",
+          "libs/narration/ui/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["scope:narration", "type:ui"]
+}

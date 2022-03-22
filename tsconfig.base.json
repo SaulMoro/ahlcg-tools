@@ -21,6 +21,7 @@
       "@ahlcg-tools/narration/feature-narration-main": [
         "libs/narration/feature-narration-main/src/index.ts"
       ],
+      "@ahlcg-tools/narration/ui": ["libs/narration/ui/src/index.ts"],
       "@ahlcg-tools/narration/util-models": [
         "libs/narration/util-models/src/index.ts"
       ],

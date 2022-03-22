@@ -12,7 +12,7 @@ import { RouterModule } from '@angular/router';
           ),
       },
       {
-        path: ':id',
+        path: 'campaign/:id',
         loadChildren: () =>
           import('./campaign-detail-container.component').then(
             (module) => module.CampaignDetailContainerComponentModule

@@ -17,7 +17,7 @@ import { environment } from '../environments/environment';
         {
           path: '',
           loadChildren: () =>
-            import('@ahlcg-tools/narration-feature-narration-main').then(
+            import('@ahlcg-tools/narration/feature-narration-main').then(
               (module) => module.NarrationFeatureNarrationMainModule
             ),
         },

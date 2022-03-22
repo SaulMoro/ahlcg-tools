@@ -57,8 +57,25 @@
     },
     {
       "files": ["*.ts", "*.tsx"],
+      "parserOptions": {
+        "project": ["tsconfig.base.json"]
+      },
       "extends": ["plugin:@nrwl/nx/typescript"],
-      "rules": {}
+      "rules": {
+        "max-len": [
+          "error",
+          {
+            "code": 120,
+            "ignorePattern": "^import [^,]+ from | ^export | `.{30,}` | '.{30,}': | (class|d)="
+          }
+        ],
+        "@typescript-eslint/no-empty-function": [
+          "error",
+          {
+            "allow": ["constructors"]
+          }
+        ]
+      }
     },
     {
       "files": ["*.js", "*.jsx"],
